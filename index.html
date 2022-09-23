@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="css.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <title>Rolinha Agenda</title>
+</head>
+<body>  
+    <img class="imagem" src="IMAGENS/agenda01.png">
+    <form method="post" action="recebe.php">
+        <div class="form_agenda">
+            <label class="nome"> Nome : </label>
+                <input type="text" name="txtNome" class="input_nome" required><br>
+            <label class="dt_nasc"> Data de Nascimento :</label>
+                <input type="date" name="txtDataNascimento" class="input_data" required><br>
+            <label class="tel"> Telefone :</label>
+                <input type="text" name="txtTelefone" id="tel" placeholder="(00)00000-0000" class="input_tel"><br>
+            <label class="email"> E-mail :</label>
+                <input type="email" name="txtEmail" class="input_email"><br>
+            <input type="submit" value="Enviar" class="button_enviar">
+            <input type="reset" value="Limpar" class="button_limpar">
+            <a href="PHP/exibir.php"> Exibir </a>
+            <script type="text/javascript">
+                $("#tel").mask("(00)00000-0000");
+            </script>
+        </div>
+    </form>
+</body>
+</html>
